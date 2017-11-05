@@ -1,3 +1,11 @@
-<p>
-  professional-view works!
-</p>
+<section class="professional-div">
+  <div class="professional-picture-div">
+    <img class="professional-picture" [src]="professional.picture">
+  </div>
+  <div class="professional-info">
+    <h2>{{professional.name}}</h2>
+    <h3>{{professional.languages[0]}}</h3>
+    <h3>{{professional.experience[1]}}</h3>
+  </div>
+  <a routerLink="/appointment">Make an appointment</a>
+</section>
