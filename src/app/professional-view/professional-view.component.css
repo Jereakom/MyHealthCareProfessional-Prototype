@@ -1,20 +1,19 @@
 .professional-div {
   border-radius: 15px;
   width: 80%;
-  height:250px;
   background-color: rgb(67, 141, 204);
   box-shadow: 1px 1px 10px;
   margin:auto;
 }
 .professional-picture-div{
-  background-color: yellow;
+  margin-top: 1em;
   width: 15%;
   float:left;
+  height: 100%;
 }
 .professional-info {
-  background-color: red;
-  margin-left: 15%;
-  text
+  position: relative;
+  left: -7.5%;
 }
 .professional-picture {
   border-radius: 50%;

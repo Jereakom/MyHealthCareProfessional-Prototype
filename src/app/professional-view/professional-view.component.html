@@ -1,11 +1,18 @@
-<section class="professional-div">
+<section class="professional-div" *ngFor="let professional of professionals" >
   <div class="professional-picture-div">
     <img class="professional-picture" [src]="professional.picture">
   </div>
   <div class="professional-info">
     <h2>{{professional.name}}</h2>
-    <h3>{{professional.languages[0]}}</h3>
-    <h3>{{professional.experience[1]}}</h3>
+    <input [(ngModel)]="professional.name" placeholder="name">
+    <h3>{{professional.languages}}</h3>
+
   </div>
-  <a routerLink="/appointment">Make an appointment</a>
+  <h3>{{professional.experience}}</h3>
+  <div id="calendarFor{{professional.id}}">
+    <input #date type="date" value="2017-11-06">
+    <br>
+    <span class="price">Price: {{professional.price}}</span>
+  </div>
+  <button type="button" style="margin-top:0.5em;margin-bottom:0.5em;" (click)="onSelect(professional, date.value)">Make an appointment</button>
 </section>
