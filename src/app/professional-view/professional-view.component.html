@@ -4,12 +4,11 @@
   </div>
   <div class="professional-info">
     <h2>{{professional.name}}</h2>
-    <input [(ngModel)]="professional.name" placeholder="name">
     <h3>{{professional.languages}}</h3>
-
+    <h3>{{professional.experience}}</h3>
   </div>
-  <h3>{{professional.experience}}</h3>
-  <div id="calendarFor{{professional.id}}">
+  <h3>{{professional.location}}</h3>
+  <div>
     <input #date type="date" value="2017-11-06">
     <br>
     <span class="price">Price: {{professional.price}}</span>

@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { ProfessionalProfileComponent } from './professional-profile.component';
@@ -10,7 +11,9 @@ import { SearchViewComponent } from './search-view.component';
 import { PageNotFoundComponent } from './not-found.component';
 import { CalendarModule } from 'angular-calendar';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { ProfessionalComponent } from './professional/professional.component';
+
+import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { InMemoryDataService }  from './in-memory-data.service';
 
 const appRoutes: Routes = [
   { path: 'professionals', component: ProfessionalViewComponent },
@@ -26,13 +29,14 @@ const appRoutes: Routes = [
     ProfessionalViewComponent,
     PageNotFoundComponent,
     SearchViewComponent,
-    ProfessionalProfileComponent,
-    ProfessionalComponent
+    ProfessionalProfileComponent
   ],
   imports: [
     BrowserModule,
-    NgbModule.forRoot(),
+    HttpModule,
     FormsModule,
+    InMemoryWebApiModule.forRoot(InMemoryDataService),
+    NgbModule.forRoot(),
     RouterModule.forRoot(
       appRoutes
     ),

@@ -1,0 +1,34 @@
+<section class="professional-div" *ngIf="loggedin; else elseBlock" >
+  <div class="professional-picture-div">
+    <img class="professional-picture" [src]="professional.picture">
+  </div>
+  <div class="professional-info">
+    <h2>{{selectedProfessional.name}}</h2>
+    <h3>{{selectedProfessional.languages}}</h3>
+    <h3>{{selectedProfessional.experience}}</h3>
+  </div>
+  <h3>{{selectedProfessional.location}}</h3>
+  <div>
+    <input #date type="date" value="2017-11-06">
+    <br>
+    <span class="price">Price: {{selectedProfessional.price}}</span>
+  </div>
+  <button type="button" style="margin-top:0.5em;margin-bottom:0.5em;" (click)="loggedin=false">Make an appointment</button>
+</section>
+<ng-template #elseBlock>
+
+  <input #name placeholder="name">
+  <br>
+  <input #sex placeholder="sex">
+  <br>
+  <input #language placeholder="language">
+  <br>
+  <input #experience placeholder="experience">
+  <br>
+  <input #price placeholder="price">
+  <br>
+  <input #location placeholder="location">
+  <br>
+
+  <button type="button" style="margin-top:0.5em;margin-bottom:0.5em;" (click)="add(name.value, sex.value, language.value, experience.value, price.value, location.value);loggedin=true">PRESS ME</button>
+</ng-template>
