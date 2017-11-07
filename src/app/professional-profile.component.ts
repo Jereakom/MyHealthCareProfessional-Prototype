@@ -15,10 +15,10 @@ export class ProfessionalProfileComponent implements OnInit {
 
   professionals: Professional[];
 
-  getProfessionals(): void {
-    //this.professionals = this.professionalService.getProfessionals();
-    this.professionalService.getProfessionals().then(professionals => this.professionals = professionals);
+  selectedProfessional: Professional;
 
+  getProfessionals(): void {
+    this.professionalService.getProfessionals().then(professionals => this.professionals = professionals);
   }
 
   add(name: string, sex: string, language: string, experience: string, price: number, location: string): void {
@@ -34,12 +34,12 @@ export class ProfessionalProfileComponent implements OnInit {
     }
     this.professionalService.create(id, name, sex, language, experience, price, location)
         .then(professional => {
+          this.selectedProfessional = professional;
           this.professionals.push(professional);
         });
   }
 
   ngOnInit(): void {
       this.getProfessionals();
-
     }
 }

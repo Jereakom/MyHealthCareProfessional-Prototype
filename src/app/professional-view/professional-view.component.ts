@@ -32,6 +32,7 @@ export class ProfessionalViewComponent implements OnInit {
 
   showAllProfessionals(): void{
     this.professionalService.getProfessionals().then(professionals => this.professionals = professionals);
+    console.log(this.professionals);
   }
 
   ngOnInit(): void {

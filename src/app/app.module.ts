@@ -19,7 +19,7 @@ const appRoutes: Routes = [
   { path: 'professionals', component: ProfessionalViewComponent },
   { path: 'search', component: SearchViewComponent},
   { path: 'profile', component: ProfessionalProfileComponent},
-  { path: '', redirectTo: '/professionals', pathMatch: 'full'},
+  { path: '', redirectTo: '/search', pathMatch: 'full'},
   { path: '**', component: PageNotFoundComponent }
 ]
 

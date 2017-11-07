@@ -1,4 +1,4 @@
-<section class="professional-div" *ngFor="let professional of professionals">
+<section class="professional-div" *ngFor="let professional of professionals; index as i; last as isLast">
   <div class="professional-picture-div">
     <img class="professional-picture" [src]="professional.picture">
   </div>
@@ -15,6 +15,6 @@
     <br>
     <button type="button" style="margin-top:0.5em;margin-bottom:0.5em;" (click)="onSelect(professional, date.value)">Make an appointment</button>
   </div>
+  <br>
+  <button *ngIf="isLast && !clicked" style="margin-bottom: 2em;width:80%;height:50px;" (click)="showAllProfessionals(); clicked=true;" >See all professionals</button>
 </section>
-<br>
-<button style="margin-bottom: 2em;width:80%;height:50px;" (click)="showAllProfessionals" >See all professionals</button>
