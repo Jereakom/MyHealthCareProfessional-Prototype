@@ -2,10 +2,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
+import { PatentLoginComponent } from './patent-login/patent-login.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PatentLoginComponent
   ],
   imports: [
     BrowserModule
