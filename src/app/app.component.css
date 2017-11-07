@@ -25,7 +25,11 @@
     padding: 2em;
 }
 .formstyle{
-    border: 2px;
+    padding-top: 10px;
+    color: white;
+    font-weight: bold;
+    font-display: block;
+   
           }
 .footer{
   background-color: blue;
