@@ -29,7 +29,7 @@ const appRoutes: Routes = [
     ProfessionalViewComponent,
     PageNotFoundComponent,
     SearchViewComponent,
-    ProfessionalProfileComponent
+    ProfessionalProfileComponent,
   ],
   imports: [
     BrowserModule,

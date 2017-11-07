@@ -1,4 +1,4 @@
-<section class="professional-div" *ngFor="let professional of professionals" >
+<section class="professional-div" *ngFor="let professional of professionals">
   <div class="professional-picture-div">
     <img class="professional-picture" [src]="professional.picture">
   </div>
@@ -7,11 +7,14 @@
     <h3>{{professional.languages}}</h3>
     <h3>{{professional.experience}}</h3>
   </div>
-  <h3>{{professional.location}}</h3>
   <div>
+    <h3>{{professional.location}}</h3>
     <input #date type="date" value="2017-11-06">
     <br>
     <span class="price">Price: {{professional.price}}</span>
+    <br>
+    <button type="button" style="margin-top:0.5em;margin-bottom:0.5em;" (click)="onSelect(professional, date.value)">Make an appointment</button>
   </div>
-  <button type="button" style="margin-top:0.5em;margin-bottom:0.5em;" (click)="onSelect(professional, date.value)">Make an appointment</button>
 </section>
+<br>
+<button style="margin-bottom: 2em;width:80%;height:50px;" (click)="showAllProfessionals" >See all professionals</button>

@@ -143,6 +143,22 @@ export class InMemoryDataService implements InMemoryDbService {
         location: 'Ultima Way 0'
       }
     ];
-    return {professionals};
+    const top5 = [
+      professionals[Math.floor((Math.random() * 14))],
+      professionals[Math.floor((Math.random() * 14))],
+      professionals[Math.floor((Math.random() * 14))],
+      professionals[Math.floor((Math.random() * 14))],
+      professionals[Math.floor((Math.random() * 14))]
+    ];
+
+    function shuffleAround() {
+
+      //generate the order
+
+
+    }
+
+    return {professionals, top5};
   }
+
 }

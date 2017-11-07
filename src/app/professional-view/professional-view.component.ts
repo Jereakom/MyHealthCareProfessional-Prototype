@@ -19,16 +19,23 @@ export class ProfessionalViewComponent implements OnInit {
   professionals: Professional[];
 
   getProfessionals(): void {
-    //this.professionals = this.professionalService.getProfessionals();
     this.professionalService.getProfessionals().then(professionals => this.professionals = professionals);
+  }
+
+  getTop5(): void {
+    this.professionalService.getTop5().then(professionals => this.professionals = professionals);
   }
 
   onSelect(professional: Professional, date): void {
     alert("You selected " +professional.name+"! The date is "+date+", and the price for the appointment is "+professional.price+" euro.");
   }
 
+  showAllProfessionals(): void{
+    this.professionalService.getProfessionals().then(professionals => this.professionals = professionals);
+  }
+
   ngOnInit(): void {
-    this.getProfessionals();
+    this.getTop5();
   }
 
 }

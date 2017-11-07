@@ -9,6 +9,7 @@ import { Professional } from './professional';
 export class ProfessionalService {
 
   private professionalsUrl = 'api/professionals';
+  private top5Url = 'api/top5';
 
   private headers = new Headers({'Content-Type': 'application/json'});
 
@@ -34,7 +35,14 @@ export class ProfessionalService {
     .toPromise()
     .then(res => res.json() as Professional)
     .catch(this.handleError);
-}
+  }
 
+  getTop5(): Promise<Professional[]> {
+
+    return this.http.get(this.top5Url)
+               .toPromise()
+               .then(response => response.json() as Professional[])
+               .catch(this.handleError);
+  }
 
 }
