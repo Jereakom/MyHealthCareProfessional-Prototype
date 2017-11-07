@@ -27,7 +27,11 @@ export class ProfessionalViewComponent implements OnInit {
   }
 
   onSelect(professional: Professional, date): void {
-    alert("You selected " +professional.name+"! The date is "+date+", and the price for the appointment is "+professional.price+" euro.");
+
+    console.log(date);
+
+    alert("You selected " +professional.name+"! The appointment is on "+date+", and the price for the appointment is "+professional.price+" euro.");
+    //document.location.replace("/search");
   }
 
   showAllProfessionals(): void{

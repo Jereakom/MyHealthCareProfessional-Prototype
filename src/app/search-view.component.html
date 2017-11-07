@@ -1,0 +1,49 @@
+<div class = formstyle>
+  What do you want
+  <select>
+    <option value="Physiotherapy">Physiotherapy</option>
+    <option value="Ocupation Therapy">Ocupation Therapy</option>
+    <option value="Doctor">doctor</option>
+    <option value="Routine Visit">Routine Visit</option>
+  </select>
+  <br>
+  Where is your Pain
+  <select>
+    <option value="Circulatory system">Circulatory system</option>
+    <option value="Digestive System">Digestive System</option>
+    <option value="Endocrine System">Endocrine System</option>
+    <option value="Immune System">Immune System</option>
+  </select>
+  <br>
+  City         <select>
+  <option value="Helsinki">Helsinki</option>
+  <option value="Oulu">Oulu</option>
+  <option value="Porvo">Porvoo</option>
+  <option value="Rovaniemi">Rovaniemi</option>
+  <option value="Espoo">Espoo</option>
+  <option value="Kemi">Kemi</option>
+  <option value="Vantaa">Vantaa</option>
+  </select><br>
+  <!--input type="text" id="name" name="phone number" placeholder="location" title="Please enter your Phone Number" required=""!-->
+  Date you want
+  <input type="date" name="" value="2017-11-07">
+  <br>
+  <br>
+  <button type="button" name="button" (click)="addedCriteria=true">More Criteria</button>
+  <div *ngIf="addedCriteria"  class="criteria">
+    Sex <input type="text" name="" value="">
+    <br>
+    Language <input type="text" name="" value="">
+    <br>
+    Experience <input type="text" name="" value="">
+    <br>
+    Studies <input type="text" name="" value="">
+    <br>
+    Insurance <input type="text" name="" value="">
+    <br>
+  </div>
+
+
+  <button (click)="displayProfessionals()">Search</button>
+
+</div>

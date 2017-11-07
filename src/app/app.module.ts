@@ -20,7 +20,7 @@ import { InMemoryDataService }  from './in-memory-data.service';
 const appRoutes: Routes = [
   { path: 'professionals', component: ProfessionalViewComponent },
   { path: 'search', component: SearchViewComponent},
-  { path: 'profile', component: ProfessionalProfileComponent},
+//  { path: 'profile', component: ProfessionalProfileComponent},
   { path: 'login', component: PatientLoginComponent},
   { path: '', redirectTo: '/search', pathMatch: 'full'},
   { path: '**', component: PageNotFoundComponent }

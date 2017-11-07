@@ -2,17 +2,17 @@
   <div class="w3l-login form">
 			<form action="../profile.html" method="post">
 				<div class="form-sub-w3">
-					<input type="text" name="Username" placeholder="Username" required/>
+					<input type="text" #uname name="Username" placeholder="Username" required/>
 				</div>
 				<div class="form-sub-w3">
-					<input type="password" name="Password" placeholder="Password" required/>
+					<input type="password" #pwd name="Password" placeholder="Password" required/>
 				</div>
 				<label class="anim">
 					<input type="checkbox" class="checkbox">
 					<span>Remember Me</span>
 				</label>
 				<div class="submit-agileits">
-					<input type="submit" value="login">
+					<input type="submit" (click)="login(uname.value, pwd.value)" value="login">
 					<a href="../profile.html"></a>
 
 				</div>

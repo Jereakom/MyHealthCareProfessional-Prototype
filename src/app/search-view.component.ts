@@ -1,6 +1,12 @@
 import { Component } from '@angular/core';
 
 @Component({
-  template: '<h2>This will house the search function eventually</h2>'
+  templateUrl: './search-view.component.html'
 })
-export class SearchViewComponent {}
+export class SearchViewComponent {
+
+  displayProfessionals(): void {
+    window.location.replace("/professionals");
+  }
+
+}
