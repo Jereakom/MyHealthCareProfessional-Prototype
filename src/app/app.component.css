@@ -1,7 +1,7 @@
 .header{
     padding:20px;
     height: 100px;
-    background-color: blue;
+    background-color: rgb(67, 141, 204);
         }
 .body{
      background-image: url(../assets/background.jpg);
@@ -28,12 +28,13 @@
     border: 2px;
           }
 .footer{
-  background-color: blue;
+  margin-top: 2em;
+  background-color: rgb(67, 141, 204);
     height: 5em;
     display: block;
 }
 .btn {
-    border: none; 
+    border: none;
     color: white; /
     cursor: pointer;
     float: right;
@@ -41,7 +42,5 @@
     margin-right: 2%;
 }
 
-.success {background-color:black;} 
+.success {background-color:black;}
 .success:hover {background-color: #46a049;}
-
-

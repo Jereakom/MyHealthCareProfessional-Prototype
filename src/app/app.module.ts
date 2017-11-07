@@ -9,6 +9,8 @@ import { ProfessionalProfileComponent } from './professional-profile.component';
 import { ProfessionalViewComponent } from './professional-view/professional-view.component';
 import { SearchViewComponent } from './search-view.component';
 import { PageNotFoundComponent } from './not-found.component';
+import { PatientLoginComponent } from './patient-login.component';
+
 import { CalendarModule } from 'angular-calendar';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
@@ -19,6 +21,7 @@ const appRoutes: Routes = [
   { path: 'professionals', component: ProfessionalViewComponent },
   { path: 'search', component: SearchViewComponent},
   { path: 'profile', component: ProfessionalProfileComponent},
+  { path: 'login', component: PatientLoginComponent},
   { path: '', redirectTo: '/search', pathMatch: 'full'},
   { path: '**', component: PageNotFoundComponent }
 ]
@@ -30,6 +33,7 @@ const appRoutes: Routes = [
     PageNotFoundComponent,
     SearchViewComponent,
     ProfessionalProfileComponent,
+    PatientLoginComponent
   ],
   imports: [
     BrowserModule,

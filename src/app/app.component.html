@@ -1,13 +1,14 @@
 <div style="text-align:center">
-  <h1>
-    {{title}}
-  </h1>
-  <nav>
-    <a routerLink="/professionals" routerLinkActive="active">Professionals</a>
-    <a routerLink="/search" routerLinkActive="active">Search</a>
-    <a routerLink="/profile" routerLinkActive="active">Professional profile</a>
-    <a routerLink="/login" routerLinkActive="active">Patient login</a>
-  </nav>
+  <div class=header>
+    <span style="float: left; padding-bottom: inherit"><img src="../assets/logo.jpg"></span>
+    <span style="font-family:monospace;color:white;font-style:bold;"><h1>{{title}}</h1></span>
+    <nav>
+      <a routerLink="/professionals" routerLinkActive="active">Professionals</a>
+      <a routerLink="/search" routerLinkActive="active">Search</a>
+      <a routerLink="/profile" routerLinkActive="active">Professional profile</a>
+      <a routerLink="/login" routerLinkActive="active">Patient login</a>
+    </nav>
+  </div>
   <br>
   <router-outlet></router-outlet>
 
@@ -16,7 +17,6 @@
   <div style="float: left;color:white">Downlaod Us<br>
     <img src="../assets/store.png">
   </div>
-  <button class="btn success">LOGIN as <br> Customer</button>
   <div style="align-content: center; color: white;">Follow Us<br>
     <div style="background-color: aliceblue;height: auto;width:70px;margin-left: 48.5%;margin-top:5px;">
       <img src="../assets/facebook.png">&nbsp;
