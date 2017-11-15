@@ -6,6 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'My Health Care Professional';
+  title = 'Healthmatch';
   logo ='company logo';
 }
